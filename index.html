@@ -5,13 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akhil Sharma | Senior Full Stack .NET Developer</title>
 
-  <!-- Google Font -->
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,7 +16,7 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="container nav-content">
-    <div class="logo">Akhil</div>
+    <div class="logo">Akhil Sharma</div>
 
     <div class="menu-toggle" id="menu-toggle">
       <span></span><span></span><span></span>
@@ -48,7 +45,7 @@
     </p>
 
     <div class="hero-buttons">
-      <a href="Akhil_Sharma_Resume.pdf" class="btn primary" download>
+      <a href="Akhil_Sharma_Resume.pdf" class="btn primary">
         <i class='bx bx-download'></i> Resume
       </a>
       <a href="https://www.linkedin.com/in/akhil-sharma-90b3b547/"
@@ -61,7 +58,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about" class="section bg-soft">
   <div class="container">
     <h3>About Me</h3>
     <p>
@@ -77,52 +74,68 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section light-bg">
+<section id="skills" class="section">
   <div class="container">
     <h3>Skills</h3>
     <div class="grid">
-      <div class="card"><i class='bx bx-code'></i><h4>.NET Core & C#</h4></div>
-      <div class="card"><i class='bx bx-layer'></i><h4>MVC & Web API</h4></div>
-      <div class="card"><i class='bx bx-palette'></i><h4>HTML, CSS, JS</h4></div>
-      <div class="card"><i class='bx bx-data'></i><h4>SQL Server</h4></div>
-      <div class="card"><i class='bx bx-cloud'></i><h4>Azure & DevOps</h4></div>
-      <div class="card"><i class='bx bx-git-branch'></i><h4>Agile / CI-CD</h4></div>
+      <div class="skill-card blue"><i class='bx bx-code'></i><span>.NET Core & C#</span></div>
+      <div class="skill-card violet"><i class='bx bx-layer'></i><span>MVC & Web API</span></div>
+      <div class="skill-card green"><i class='bx bx-palette'></i><span>HTML, CSS, JS</span></div>
+      <div class="skill-card orange"><i class='bx bx-data'></i><span>SQL Server</span></div>
+      <div class="skill-card blue"><i class='bx bx-cloud'></i><span>Azure & DevOps</span></div>
+      <div class="skill-card violet"><i class='bx bx-git-branch'></i><span>Agile / CI-CD</span></div>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section">
+<section id="experience" class="section bg-soft">
   <div class="container">
     <h3>Experience</h3>
 
     <div class="timeline">
+
       <div class="timeline-item">
-        <span class="dot"></span>
+        <span class="dot blue"></span>
         <h4>Traceone India Pvt. Ltd.</h4>
         <small>Senior Software Developer | Sep 2023 – Present</small>
         <p>PLM platform – Pack module | .NET Core & Web APIs</p>
       </div>
 
       <div class="timeline-item">
-        <span class="dot"></span>
+        <span class="dot violet"></span>
         <h4>Photon Interactive Pvt. Ltd.</h4>
         <small>Senior Software Engineer IV | Feb 2021 – Sep 2023</small>
         <p>Enterprise applications using MVC & Web APIs</p>
       </div>
 
       <div class="timeline-item">
-        <span class="dot"></span>
+        <span class="dot green"></span>
         <h4>Sakhatech Information Systems Pvt. Ltd.</h4>
         <small>Software Engineer Consultant | Oct 2020 – Feb 2021</small>
-        <p>Web APIs, bug fixing, system enhancements</p>
+        <p>Web API development, bug fixing, system design improvements</p>
       </div>
+
+      <div class="timeline-item">
+        <span class="dot orange"></span>
+        <h4>Cunesoft India Pvt. Ltd. (Phlexglobal Ltd.)</h4>
+        <small>Software Developer | Dec 2018 – Sep 2020</small>
+        <p>Enterprise applications, change requests, SQL & production support</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="dot blue"></span>
+        <h4>MP Online Ltd.</h4>
+        <small>Software Engineer | Oct 2014 – Dec 2018</small>
+        <p>Government-scale applications, deployment, maintenance, user training</p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section light-bg">
+<section id="projects" class="section">
   <div class="container">
     <h3>Projects</h3>
     <div class="grid">
@@ -155,23 +168,20 @@
   </div>
 </footer>
 
-<!-- SCRIPT -->
 <script>
-  // Mobile menu
   const toggle = document.getElementById("menu-toggle");
   const nav = document.getElementById("nav-links");
   toggle.onclick = () => nav.classList.toggle("active");
 
-  // Active menu on scroll
   const sections = document.querySelectorAll("section, footer");
   const navLinks = document.querySelectorAll(".nav-link");
 
   window.addEventListener("scroll", () => {
     let current = "";
     sections.forEach(sec => {
-      const top = window.scrollY;
-      const offset = sec.offsetTop - 120;
-      if (top >= offset) current = sec.getAttribute("id");
+      if (window.scrollY >= sec.offsetTop - 120) {
+        current = sec.getAttribute("id");
+      }
     });
 
     navLinks.forEach(link => {
