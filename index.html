@@ -63,4 +63,95 @@
         Web APIs, and SQL Server.
       </p>
       <p>
-        Currently working at Tr
+        Currently working at Traceone India Pvt. Ltd. on a PLM platform, focusing
+        on the Pack module that manages the complete lifecycle of packaging.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section dark">
+    <div class="container fade-in">
+      <h3>Tech Stack</h3>
+      <div class="grid">
+        <div class="card">Backend<br><span>.NET Core, Web API, MVC</span></div>
+        <div class="card">Frontend<br><span>HTML, CSS, JS, jQuery</span></div>
+        <div class="card">Database<br><span>SQL Server, Cosmos DB</span></div>
+        <div class="card">Cloud<br><span>Azure, DevOps, CI/CD</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container fade-in">
+      <h3>Experience</h3>
+
+      <div class="timeline-item">
+        <h4>Traceone India Pvt. Ltd.</h4>
+        <span>Senior Software Developer | Sep 2023 – Present</span>
+        <p>PLM platform – Pack module, .NET Core & Web APIs</p>
+      </div>
+
+      <div class="timeline-item">
+        <h4>Photon Interactive Pvt. Ltd.</h4>
+        <span>Senior Software Engineer IV | Feb 2021 – Sep 2023</span>
+        <p>Enterprise apps using MVC & Web APIs</p>
+      </div>
+
+      <div class="timeline-item">
+        <h4>Sakhatech Information Systems Pvt. Ltd.</h4>
+        <span>Software Engineer Consultant | Oct 2020 – Feb 2021</span>
+        <p>Web APIs, bug fixing, system review</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section dark">
+    <div class="container fade-in">
+      <h3>Projects</h3>
+      <div class="grid">
+        <div class="card">PLM – Pack Module</div>
+        <div class="card">Frontier Scientific Interface</div>
+        <div class="card">GSK – UnitedLex Integration</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact" class="footer">
+    <div class="container fade-in">
+      <h3>Contact</h3>
+      <p>Bangalore, India</p>
+      <p>Email: <a href="mailto:akhilrk89@gmail.com">akhilrk89@gmail.com</a></p>
+      <p>Phone: +91-8103880438</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // Mobile menu
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      toggle.classList.toggle("open");
+    });
+
+    // Scroll animation
+    const faders = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fade => observer.observe(fade));
+  </script>
+
+</body>
+</html>
