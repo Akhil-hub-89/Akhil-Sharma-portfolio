@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akhil Sharma | Senior Full Stack .NET Developer</title>
 
-  <!-- Font -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
@@ -16,7 +16,7 @@
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="container nav-content">
-      <div class="logo">Akhil</div>
+      <div class="logo">Akhil Sharma</div>
 
       <div class="menu-toggle" id="menu-toggle">
         <span></span>
@@ -37,79 +37,82 @@
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <div class="container fade-in">
-      <h1>Akhil Sharma</h1>
+    <div class="container hero-content">
+      <h1>Hi, I'm Akhil 👋</h1>
       <h2>Senior Full Stack .NET Developer</h2>
       <p>
-        Building scalable, secure, and enterprise-grade applications with
-        <strong>10+ years of experience</strong> across PLM, Pharma, Healthcare,
-        Government, and Defense domains.
+        Senior Full Stack Developer with <strong>10+ years of experience</strong>
+        building scalable enterprise applications across PLM, Pharma,
+        Healthcare, Government, and Defense domains.
       </p>
 
       <div class="hero-buttons">
         <a href="Akhil_Sharma_Resume.pdf" class="btn primary" download>Download Resume</a>
-        <a href="#contact" class="btn secondary">Contact Me</a>
+        <a href="#contact" class="btn outline">Contact Me</a>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <div class="container fade-in">
+    <div class="container">
       <h3>About Me</h3>
       <p>
         I am a Senior Full Stack .NET Developer with over 10 years of experience
-        in building enterprise-grade applications using .NET Core, ASP.NET MVC,
-        Web APIs, and SQL Server.
+        in designing, developing, and maintaining enterprise-grade applications
+        using .NET Core, ASP.NET MVC, Web APIs, and SQL Server.
       </p>
       <p>
-        Currently working at Traceone India Pvt. Ltd. on a PLM platform, focusing
-        on the Pack module that manages the complete lifecycle of packaging.
+        Currently working at Traceone India Pvt. Ltd. on a PLM platform, where I
+        contribute to the Pack module responsible for managing the complete
+        lifecycle of packaging.
       </p>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section dark">
-    <div class="container fade-in">
-      <h3>Tech Stack</h3>
+  <section id="skills" class="section light-bg">
+    <div class="container">
+      <h3>Skills</h3>
       <div class="grid">
-        <div class="card">Backend<br><span>.NET Core, Web API, MVC</span></div>
-        <div class="card">Frontend<br><span>HTML, CSS, JS, jQuery</span></div>
-        <div class="card">Database<br><span>SQL Server, Cosmos DB</span></div>
-        <div class="card">Cloud<br><span>Azure, DevOps, CI/CD</span></div>
+        <div class="card">C# / .NET Core</div>
+        <div class="card">ASP.NET MVC & Web API</div>
+        <div class="card">HTML, CSS, JavaScript</div>
+        <div class="card">SQL Server & Cosmos DB</div>
+        <div class="card">Azure Functions & Logic Apps</div>
+        <div class="card">Azure DevOps & CI/CD</div>
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
   <section id="experience" class="section">
-    <div class="container fade-in">
+    <div class="container">
       <h3>Experience</h3>
 
-      <div class="timeline-item">
+      <div class="experience-item">
         <h4>Traceone India Pvt. Ltd.</h4>
         <span>Senior Software Developer | Sep 2023 – Present</span>
-        <p>PLM platform – Pack module, .NET Core & Web APIs</p>
+        <p>PLM platform – Pack module | .NET Core, Web APIs</p>
       </div>
 
-      <div class="timeline-item">
+      <div class="experience-item">
         <h4>Photon Interactive Pvt. Ltd.</h4>
         <span>Senior Software Engineer IV | Feb 2021 – Sep 2023</span>
-        <p>Enterprise apps using MVC & Web APIs</p>
+        <p>Enterprise applications using MVC & Web APIs</p>
       </div>
 
-      <div class="timeline-item">
+      <div class="experience-item">
         <h4>Sakhatech Information Systems Pvt. Ltd.</h4>
         <span>Software Engineer Consultant | Oct 2020 – Feb 2021</span>
-        <p>Web APIs, bug fixing, system review</p>
+        <p>Web APIs, bug fixing, system enhancements</p>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section dark">
-    <div class="container fade-in">
+  <section id="projects" class="section light-bg">
+    <div class="container">
       <h3>Projects</h3>
       <div class="grid">
         <div class="card">PLM – Pack Module</div>
@@ -121,7 +124,7 @@
 
   <!-- CONTACT -->
   <footer id="contact" class="footer">
-    <div class="container fade-in">
+    <div class="container">
       <h3>Contact</h3>
       <p>Bangalore, India</p>
       <p>Email: <a href="mailto:akhilrk89@gmail.com">akhilrk89@gmail.com</a></p>
@@ -131,26 +134,12 @@
 
   <!-- SCRIPT -->
   <script>
-    // Mobile menu
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav-links");
 
     toggle.addEventListener("click", () => {
       nav.classList.toggle("active");
-      toggle.classList.toggle("open");
     });
-
-    // Scroll animation
-    const faders = document.querySelectorAll(".fade-in");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    }, { threshold: 0.2 });
-
-    faders.forEach(fade => observer.observe(fade));
   </script>
 
 </body>
