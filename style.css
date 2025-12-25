@@ -1,9 +1,9 @@
 :root {
-  --bg-primary: #0f172a;
-  --bg-secondary: #020617;
-  --accent: #22d3ee;
-  --text-primary: #e5e7eb;
-  --text-secondary: #9ca3af;
+  --primary: #2563eb;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --bg-light: #ffffff;
+  --bg-soft: #f9fafb;
 }
 
 * {
@@ -18,21 +18,37 @@ html {
 }
 
 body {
-  background: var(--bg-primary);
-  color: var(--text-primary);
+  background: var(--bg-light);
+  color: var(--text-dark);
 }
 
+/* COMMON */
 .container {
   width: 90%;
   max-width: 1100px;
   margin: auto;
 }
 
+.section {
+  padding: 90px 0;
+}
+
+.light-bg {
+  background: var(--bg-soft);
+}
+
+h3 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 /* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(15, 23, 42, 0.95);
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
   z-index: 1000;
 }
 
@@ -40,13 +56,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 18px 0;
 }
 
 .logo {
-  color: var(--accent);
-  font-size: 1.5rem;
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .nav-links {
@@ -56,10 +71,16 @@ body {
 }
 
 .nav-links a {
-  color: var(--text-primary);
   text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
 }
 
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* MOBILE MENU */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -70,116 +91,98 @@ body {
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background: var(--accent);
+  background: var(--text-dark);
 }
 
 /* HERO */
 .hero {
-  padding: 140px 0;
+  padding: 120px 0;
   text-align: center;
-  background: linear-gradient(180deg, #0f172a, #020617);
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 .hero h2 {
-  color: var(--accent);
-  margin: 15px 0;
+  color: var(--primary);
+  margin: 12px 0;
 }
 
 .hero p {
-  color: var(--text-secondary);
-  max-width: 700px;
-  margin: auto;
+  max-width: 720px;
+  margin: 20px auto;
+  color: var(--text-light);
 }
 
 /* BUTTONS */
+.hero-buttons {
+  margin-top: 30px;
+}
+
 .btn {
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: 8px;
   text-decoration: none;
-  margin: 15px 10px;
+  margin: 10px;
   display: inline-block;
+  font-weight: 600;
 }
 
 .primary {
-  background: var(--accent);
-  color: #000;
+  background: var(--primary);
+  color: white;
 }
 
-.secondary {
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
-
-/* SECTIONS */
-.section {
-  padding: 100px 0;
-}
-
-.section.dark {
-  background: var(--bg-secondary);
-}
-
-h3 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+.outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 25px;
 }
 
 .card {
-  background: #020617;
+  background: white;
   padding: 25px;
   border-radius: 12px;
-  border: 1px solid #1f2937;
+  text-align: center;
+  border: 1px solid #e5e7eb;
   transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
 
 /* EXPERIENCE */
-.timeline-item {
-  margin-bottom: 35px;
+.experience-item {
+  max-width: 750px;
+  margin: 0 auto 35px;
+  text-align: center;
 }
 
-.timeline-item span {
-  color: var(--accent);
-  font-size: 0.9rem;
+.experience-item span {
+  color: var(--primary);
+  font-size: 0.95rem;
 }
 
 /* FOOTER */
 .footer {
   padding: 60px 0;
   text-align: center;
+  background: var(--bg-soft);
 }
 
 .footer a {
-  color: var(--accent);
+  color: var(--primary);
 }
 
-/* ANIMATIONS */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* MOBILE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -189,11 +192,12 @@ h3 {
     position: absolute;
     top: 70px;
     right: 0;
-    background: var(--bg-secondary);
+    background: white;
     flex-direction: column;
-    width: 200px;
-    display: none;
+    width: 220px;
     padding: 20px;
+    display: none;
+    border: 1px solid #e5e7eb;
   }
 
   .nav-links.active {
